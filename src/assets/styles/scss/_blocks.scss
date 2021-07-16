@@ -59,7 +59,8 @@
     overflow: hidden;
     background-color: #000;
     position: relative;
-    width: clamp($xl, 500px, $xl*20);
+    display: center;
+    width: 100%;
 
     >img {
         width: 100%;
@@ -69,6 +70,7 @@
 
     >figcaption {
         padding: $xl;
+        padding-left: $s;
         border-top: solid $border-width-s $dark;
 
         >.additional-info {
@@ -78,7 +80,7 @@
 
     .is-list-view & {
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 1fr 1fr;
 
         >figcaption {
             >.additional-info {
@@ -102,6 +104,14 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: $vp-medium) {
+    .card-image-with-caption-v2 {
+        flex-basis: $xl*5;
+        flex-grow: 1;
+        flex-shrink: 1;
     }
 }
 

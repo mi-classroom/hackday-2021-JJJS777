@@ -22,8 +22,16 @@
 
 .ut-box-medium {
     > p {
-        font-size: $m;
+        font-size: $xs;
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: $vp-medium) {
+    .ut-box-medium {
+        > p {
+            font-size: $m;
+        }
     }
 }
 

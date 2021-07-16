@@ -489,7 +489,7 @@ h3 {
   font-size: 1.28rem; }
 
 .herotext {
-  font-size: 1.6rem;
+  font-size: 1rem;
   padding-bottom: 1.28rem; }
 
 .ut-bg-gradient > p {
@@ -510,8 +510,12 @@ h3 {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); }
 
 .ut-box-medium > p {
-  font-size: 1.28rem;
+  font-size: 0.8rem;
   margin: 0; }
+
+@media only screen and (min-width: 720px) {
+  .ut-box-medium > p {
+    font-size: 1.28rem; } }
 
 .ut-more-vspace {
   margin-bottom: 1.6rem; }
@@ -522,8 +526,8 @@ h3 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 1.28rem;
-  grid-row-gap: 1.28rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   transition: all 0.5s; }
   .grid-container > li > a {
     height: 100%;
@@ -532,8 +536,25 @@ h3 {
 .grid-container-zweispalter {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 1.28rem;
-  grid-row-gap: 1.28rem; }
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem; }
+
+@media only screen and (min-width: 720px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.28rem;
+    grid-row-gap: 1.28rem; }
+  .grid-container-zweispalter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.6rem;
+    grid-row-gap: 1.6rem; } }
 
 button.btn {
   padding: 0;
@@ -598,19 +619,21 @@ button.btn {
   overflow: hidden;
   background-color: #000;
   position: relative;
-  width: clamp(2rem, 500px, 40rem); }
+  display: center;
+  width: 100%; }
   .card-image-with-caption-v2 > img {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover; }
   .card-image-with-caption-v2 > figcaption {
     padding: 2rem;
+    padding-left: 1rem;
     border-top: solid 1px #666; }
     .card-image-with-caption-v2 > figcaption > .additional-info {
       display: none; }
   .is-list-view .card-image-with-caption-v2 {
     display: grid;
-    grid-template-columns: 300px 1fr; }
+    grid-template-columns: 1fr 1fr; }
     .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info {
       display: block; }
       .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info > dt,
@@ -624,6 +647,12 @@ button.btn {
         content: "";
         display: block;
         height: 0; }
+
+@media only screen and (min-width: 720px) {
+  .card-image-with-caption-v2 {
+    flex-basis: 10rem;
+    flex-grow: 1;
+    flex-shrink: 1; } }
 
 /* Image with Caption
 ############################################################################ */
