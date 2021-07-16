@@ -3,117 +3,107 @@
 ############################################################################ */
 
 .card-image-with-caption {
-  
-  border-radius: $border-radius;
-  overflow: hidden;
-  background-color: #000;
-  position: relative;
-  
-  >img {
-    width: 100%;
-  }
+    border-radius: $border-radius;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
 
-  >figcaption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: $m;
-    padding-top: $xl;
-    padding-bottom: $xs;
-
-    >.additional-info {
-      display: none;
+    >img {
+        width: 100%;
     }
-  }
-
-  .is-list-view & {
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
 
     >figcaption {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: $m;
+        padding-top: $xl;
+        padding-bottom: $xs;
 
-      >.additional-info {
-        display: block;
-
-        >dt,
-        dd,
-        >dd p {
-          display: inline;
-          color: $light;
+        >.additional-info {
+            display: none;
         }
-
-        >dt {
-          color: $lighter;
-        }
-
-        >dd:after {
-          content: "";
-          display: block;
-          height: 0;
-        }
-
-      }
     }
-  }
 
+    .is-list-view & {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+
+        >figcaption {
+            >.additional-info {
+                display: block;
+
+                >dt,
+                dd,
+                >dd p {
+                    display: inline;
+                    color: $light;
+                }
+
+                >dt {
+                    color: $lighter;
+                }
+
+                >dd::after {
+                    content: "";
+                    display: block;
+                    height: 0;
+                }
+            }
+        }
+    }
 }
 
 .card-image-with-caption-v2 {
-  
-  overflow: hidden;
-  background-color: #000;
-  position: relative;
-  
-  >img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
 
-  >figcaption {
-    padding: $m;
-    padding-top: $xl;
-    padding-bottom: $xs;
-    border-top: solid $border-width-s $light;
-
-    >.additional-info {
-      display: none;
+    >img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
-  }
-
-  .is-list-view & {
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
 
     >figcaption {
+        padding: $m;
+        padding-top: $xl;
+        padding-bottom: $xs;
+        border-top: solid $border-width-s $light;
 
-      >.additional-info {
-        display: block;
-
-        >dt,
-        dd,
-        >dd p {
-          display: inline;
-          color: $light;
+        >.additional-info {
+            display: none;
         }
-
-        >dt {
-          color: $lighter;
-        }
-
-        >dd:after {
-          content: "";
-          display: block;
-          height: 0;
-        }
-
-      }
     }
-  }
 
+    .is-list-view & {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+
+        >figcaption {
+            >.additional-info {
+                display: block;
+
+                >dt,
+                dd,
+                >dd p {
+                    display: inline;
+                    color: $light;
+                }
+
+                >dt {
+                    color: $lighter;
+                }
+
+                >dd::after {
+                    content: "";
+                    display: block;
+                    height: 0;
+                }
+            }
+        }
+    }
 }
 
 
@@ -121,67 +111,64 @@
 ############################################################################ */
 
 .image-with-caption {
+    >img {
+        width: 100%;
+    }
 
-  >img {
-    width: 100%;
-  }
-
-  >figcaption {}
+    >figcaption {}
 }
 
 /* Image Description
 ############################################################################ */
 
-.image-description{
-  padding: 0;
-  margin: 0;
+.image-description {
+    padding: 0;
+    margin: 0;
 
+    dl.rootdata {
+        margin-bottom: $xl;
 
-  dl.rootdata{
+        dt {
+            display: block;
+            position: relative;
+            min-width: $s;
+            padding-top: $s;
+            color: $lighter;
 
-    margin-bottom: $xl;
+            &::after {
+                content: "";
+                display: inline-block;
+                padding-right: $xs;
+            }
 
-    dt{
-      display: block;
-      position: relative;
-      min-width: $s;
-      padding-top: $s;
-      color: $lighter;
-
-      &::after{
-          content: "";
-          display: inline-block;
-          padding-right: $xs;
-      }
-
-      button.btn.is-right{
-        top: $s;
-      }
-    }
-
-    dd{
-      border-bottom: solid 1px $dark;
-      padding-bottom: $s;
-      margin-left: 0;
-    }
-
-    dt[data-target]{
-      margin-bottom: $s;
-
-      &.is-open{
-        .btn{
-          transform: rotate(180deg);
+            button.btn.is-right {
+                top: $s;
+            }
         }
-      }
-    }
 
-    dt[data-target] + dd{
-      overflow: hidden;
-      max-height: 1000px;
-      padding-bottom: 0;
-    }
+        dd {
+            border-bottom: solid 1px $dark;
+            padding-bottom: $s;
+            margin-left: 0;
+        }
 
-    dt[data-target] + dd.is-open{
+        dt[data-target] {
+            margin-bottom: $s;
+
+            &.is-open {
+                .btn {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        dt[data-target] + dd {
+            overflow: hidden;
+            max-height: 1000px;
+            padding-bottom: 0;
+        }
+
+        dt[data-target] + dd.is-open{
+        }
     }
-  }
 }
