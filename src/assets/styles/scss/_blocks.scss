@@ -59,6 +59,7 @@
     overflow: hidden;
     background-color: #000;
     position: relative;
+    width: clamp($xl, 500px, $xl*20);
 
     >img {
         width: 100%;
@@ -67,10 +68,8 @@
     }
 
     >figcaption {
-        padding: $m;
-        padding-top: $xl;
-        padding-bottom: $xs;
-        border-top: solid $border-width-s $light;
+        padding: $xl;
+        border-top: solid $border-width-s $dark;
 
         >.additional-info {
             display: none;
