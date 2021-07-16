@@ -467,7 +467,8 @@ pre {
 h1,
 h2,
 h3 {
-  font-weight: 100; }
+  font-weight: 100;
+  width: 60vw; }
 
 p,
 table,
@@ -490,7 +491,20 @@ h3 {
 
 .herotext {
   font-size: 1rem;
-  padding-bottom: 1.28rem; }
+  padding-bottom: 1rem;
+  max-width: 30rem; }
+
+@media only screen and (min-width: 720px) {
+  .herotext {
+    font-size: 1.28rem;
+    padding-bottom: 1.28rem;
+    max-width: 40rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .herotext {
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+    max-width: 60rem; } }
 
 .ut-bg-gradient > p {
   position: relative;
