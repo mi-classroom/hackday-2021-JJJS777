@@ -1,30 +1,60 @@
-h1, h2, h3, p, code, pre{
-  margin-bottom: $m;
+h1,
+h2,
+h3,
+p,
+code,
+pre {
+    margin-bottom: $m;
 }
 
-h1, h2, h3{
-  font-weight: 100;
+h1,
+h2,
+h3 {
+    font-weight: 100;
+    width: 60vw;
 }
 
-p, table, figcaption, dt, dl, dd{
-  line-height: 120%;
-  font-size: $s;
+p,
+table,
+figcaption,
+dt,
+dl,
+dd {
+    line-height: 120%;
+    font-size: $s;
 }
 
-h1{
-  font-size: $xl;
-  transition: .5s;
+h1 {
+    font-size: $xl;
+    transition: 0.5s;
 }
 
-h2{
-  font-size: $l;
+h2 {
+    font-size: $l;
 }
 
-h3{
-  font-size: $m;
+h3 {
+    font-size: $m;
 }
 
-.herotext{
-  font-size: $l;
-  padding-bottom: $m;
+.herotext {
+    font-size: $s;
+    padding-bottom: $s;
+    max-width: $xl*15;
+}
+
+@media only screen and (min-width: $vp-medium) {
+    .herotext {
+        font-size: $m;
+        padding-bottom: $m;
+        max-width: $xl*20;
+    }
+}
+
+@media only screen and (min-width: $vp-large) {
+    .herotext {
+        font-size: $l;
+        padding-bottom: $l;
+        max-width: $xl*30;
+    }
 }
