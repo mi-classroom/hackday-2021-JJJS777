@@ -73,7 +73,56 @@ Doku: tbd.
         [http://www.artsmia.org/viewer/detail.php?v=12&id=1324 (accessed 03.05.2012)]</p>
     </div>
 
-    <div>
+    <div class="content-wrap-field">
+      <form method="POST">
+        <div class="field-with-label">
+          <label for="dateiart">Dateiart</label>
+          <input 
+            type="text"
+            id="dateiart"
+            name="dateiart"
+          >
+        </div>
+
+        <div class="field-with-label">
+          <label for="beschreibung">Beschreibung</label>
+          <textarea name="beschreibung" id="beschreibung" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="field-with-label">
+          <label for="abbildung rechte">Abbildung Rechte</label>
+          <input 
+            type="text"
+            id="abbildung-rechte"
+            name="abbildung-rechte"          
+          >
+        </div>
+
+        <div class="field-with-label">
+          <label for="abbildung quelle">Abbildung Quelle</label>
+          <input 
+            type="text"
+            id="abbildung-quelle"
+            name="abbildung-quelle"          
+          >
+        </div>
+
+        <div class="field-with-label">
+          <label for="datum">Datum</label>
+          <input 
+            type="date"
+            id="datum"
+            name="datum" 
+            placeholder="TT MM JJJJ"         
+          >
+        </div>
+
+        <div class="field--footer">
+          <input type="reset" value="Abbruch">
+          <input type="submit" value="Speichern">
+        </div>
+
+      </form>
     </div>
   </article>
 

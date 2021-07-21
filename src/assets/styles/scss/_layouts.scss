@@ -33,8 +33,9 @@
     .grid-container-zweispalter {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: $s;
-        grid-row-gap: $s;
+        grid-template-rows: auto auto auto auto;
+        grid-column-gap: $m;
+        grid-row-gap: $xl;
     }
 }
 
